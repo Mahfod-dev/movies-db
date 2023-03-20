@@ -1,17 +1,28 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./navbar.css";
+
+const navigation = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+];
 
 function NavBar() {
   return (
     <div className='navbar-container'>
-      <Link className='link-elem' to={"/"}>
-        {" "}
-        Home
-      </Link>
-      <Link className='link-elem' to={"/about"}>
-        About
-      </Link>
+      {navigation.map((item) => {
+        return (
+          <NavLink
+            key={item.name}
+            className={({ isActive }) => {
+              return isActive ? "link-elem isActive" : "link-elem";
+            }}
+            to={item.href}
+          >
+            {item.name}
+          </NavLink>
+        );
+      })}
     </div>
   );
 }

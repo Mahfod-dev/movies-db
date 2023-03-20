@@ -1,0 +1,11 @@
+.moon-box {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b8cbd0;
+  color: #173c4d;
+  cursor: pointer;
+}

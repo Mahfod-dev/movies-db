@@ -7,7 +7,7 @@
   margin: 0 2em;
   text-decoration: none;
   font-size: 1.2em;
-  color: #b8cbd0;
+  color: var(--background);
 }
 
 .isActive {

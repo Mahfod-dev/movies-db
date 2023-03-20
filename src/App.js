@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
@@ -8,16 +9,20 @@ import About from "./routes/About/About";
 import Home from "./routes/Home/Home";
 
 function App() {
+  const [dark, setDark] = useState(false);
+
   return (
     <BrowserRouter>
-      <Header />
+      <div className='app' data-theme={dark ? "darkTheme" : ""}>
+        <Header dark={dark} setDark={setDark} />
 
-      <Routes>
-        <Route path={"/"} element={<Home />} />
-        <Route path={"about"} element={<About />} />
-      </Routes>
+        <Routes>
+          <Route path={"/"} element={<Home />} />
+          <Route path={"about"} element={<About />} />
+        </Routes>
 
-      <Footer />
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

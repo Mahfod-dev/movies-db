@@ -1,6 +1,16 @@
+:root {
+  --background: #b8cbd0;
+  --color: #173c4d;
+}
+
+[data-theme="darkTheme"] {
+  --background: #173c4d;
+  --color: #b8cbd0;
+}
+
 body {
-  background: #b8cbd0;
-  color: #173c4d;
+  background: var(--background);
+  color: var(--color);
   margin: 0;
   padding: 0;
 }

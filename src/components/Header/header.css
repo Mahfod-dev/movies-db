@@ -1,6 +1,6 @@
 .header-container {
-  background: #173c4d;
-  color: #b8cbd0;
+  background: var(--color);
+  color: var(--background);
 }
 
 .header-items {
@@ -8,15 +8,4 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 1em;
-}
-
-.moon-box {
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #b8cbd0;
-  color: #173c4d;
 }

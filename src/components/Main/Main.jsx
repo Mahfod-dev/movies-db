@@ -1,5 +1,11 @@
+import "./main.css";
+
 function Main() {
-  return <section>Main</section>;
+  return (
+    <section className='main-container'>
+      <p>Main</p>
+    </section>
+  );
 }
 
 export default Main;

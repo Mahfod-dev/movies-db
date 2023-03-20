@@ -1,0 +1,5 @@
+.footer-container {
+  background: var(--color);
+  color: var(--background);
+  height: 2em;
+}

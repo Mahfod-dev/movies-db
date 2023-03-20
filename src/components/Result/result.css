@@ -1,0 +1,22 @@
+.result-items {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  margin: 1em;
+  background: var(--color);
+  color: var(--background);
+  border-radius: 0.2em;
+}
+
+.result-img {
+  margin: 0.2em;
+  width: 30%;
+}
+
+.result-details {
+  margin: 0.5em;
+}
+
+.result-title {
+  font-size: 1.3em;
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { fetchTopRatedApi, fetchTrendingApi } from "../../utils/fetchApi";
+import { useSearchParams } from 'react-router-dom';
 import Result from "../Result/Result";
 import SearchForm from "../Search/SearchForm";
 
@@ -8,6 +9,8 @@ function Main() {
   const [searchMovie, setSearchMovie] = useState([]);
   const [topRated, setTopRated] = useState([]);
 
+ let [searchParams, setSearchParams] = useSearchParams(); 
+
   return (
     <section className='main-container'>
       <div className='search-container'>
@@ -15,9 +18,13 @@ function Main() {
           <li
             className='search-item'
             onClick={() => {
-              fetchTopRatedApi().then((res) => {
-                setTopRated(res);
-              });
+
+              let params = ('top_rated')
+
+              setSearchParams(params)
+              // fetchTopRatedApi().then((res) => {
+              //   setTopRated(res);
+              // });
             }}
           >
             Top Rate Movies
@@ -25,9 +32,14 @@ function Main() {
           <li
             className='search-item search-active'
             onClick={() => {
-              fetchTrendingApi().then((res) => {
-                SetTrending(res);
-              });
+              let params = ('trending')
+
+              setSearchParams(params)
+
+
+              // fetchTrendingApi().then((res) => {
+              //   SetTrending(res);
+              // });
             }}
           >
             Top Trend Movies

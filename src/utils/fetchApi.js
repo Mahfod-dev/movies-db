@@ -20,3 +20,16 @@ export const fetchSearchApi = async (value) => {
     console.error(error);
   }
 };
+
+export const fetchTopRatedApi = async (value) => {
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&query=${value}`
+    );
+    const data = await response.json();
+    console.log("top rated", data);
+    return data.results;
+  } catch (error) {
+    console.error(error);
+  }
+};

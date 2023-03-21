@@ -1,17 +1,27 @@
 import { useState } from "react";
-import { fetchTrendingApi } from "../../utils/fetchApi";
+import { fetchTopRatedApi, fetchTrendingApi } from "../../utils/fetchApi";
 import Result from "../Result/Result";
 import SearchForm from "../Search/SearchForm";
 
 function Main() {
   const [trending, SetTrending] = useState([]);
   const [searchMovie, setSearchMovie] = useState([]);
+  const [topRated, setTopRated] = useState([]);
 
   return (
     <section className='main-container'>
       <div className='search-container'>
         <ul className='search-list'>
-          <li className='search-item'>Top Rate Movies</li>
+          <li
+            className='search-item'
+            onClick={() => {
+              fetchTopRatedApi().then((res) => {
+                setTopRated(res);
+              });
+            }}
+          >
+            Top Rate Movies
+          </li>
           <li
             className='search-item search-active'
             onClick={() => {
@@ -26,7 +36,7 @@ function Main() {
         <SearchForm setSearchMovie={setSearchMovie} />
       </div>
       <div className='result-container'>
-        {searchMovie.map((item) => {
+        {topRated.map((item) => {
           return <Result key={item.id} item={item} />;
         })}
       </div>

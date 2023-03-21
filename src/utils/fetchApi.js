@@ -21,10 +21,10 @@ export const fetchSearchApi = async (value) => {
   }
 };
 
-export const fetchTopRatedApi = async (value) => {
+export const fetchTopRatedApi = async () => {
   try {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&query=${value}`
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`
     );
     const data = await response.json();
     console.log("top rated", data);

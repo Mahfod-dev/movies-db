@@ -20,7 +20,7 @@ function SearchForm({ setSearchMovie }) {
       <input
         type='search'
         className='form-input'
-        placeholder='The movie title...'
+        placeholder='Search movie with title...'
         value={search}
         onChange={handleChange}
       />

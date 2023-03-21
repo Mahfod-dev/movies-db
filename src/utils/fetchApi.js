@@ -5,7 +5,6 @@ export const fetchTrendingApi = async () => {
     `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`
   );
   const data = await response.json();
-  console.log(data);
   return data.results;
 };
 
@@ -27,7 +26,6 @@ export const fetchTopRatedApi = async () => {
       `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`
     );
     const data = await response.json();
-    console.log("top rated", data);
     return data.results;
   } catch (error) {
     console.error(error);

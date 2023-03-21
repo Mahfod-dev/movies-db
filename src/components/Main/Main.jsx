@@ -36,7 +36,7 @@ function Main() {
         <SearchForm setSearchMovie={setSearchMovie} />
       </div>
       <div className='result-container'>
-        {topRated.map((item) => {
+        {(topRated || trending || searchMovie).map((item) => {
           return <Result key={item.id} item={item} />;
         })}
       </div>

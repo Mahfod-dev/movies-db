@@ -6,7 +6,6 @@
 .search-container {
   width: 90%;
   display: flex;
-  justify-content: space-between;
 }
 
 .search-list {
@@ -29,6 +28,7 @@
 .form-container {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .form-input {

@@ -31,3 +31,17 @@ export const fetchTopRatedApi = async () => {
     console.error(error);
   }
 };
+
+
+export const fetchMovieDetailsApi = async (id) => {
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+

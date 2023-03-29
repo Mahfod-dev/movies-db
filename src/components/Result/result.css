@@ -20,3 +20,8 @@
 .result-title {
   font-size: 1.3em;
 }
+
+.link {
+  text-decoration: none;
+  color: var(--background);
+}
